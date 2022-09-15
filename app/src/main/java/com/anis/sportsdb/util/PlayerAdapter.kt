@@ -1,15 +1,14 @@
-package com.anis.sportsdb
+package com.anis.sportsdb.util
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.webkit.URLUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.anis.sportsdb.R
 import com.anis.sportsdb.databinding.ListItemPlayerBinding
 import com.anis.sportsdb.model.Player
 
-private const val TAG="ListAdapter"
 class PlayerViewHolder(
     private val binding: ListItemPlayerBinding
 ) : RecyclerView.ViewHolder(binding.root) {
@@ -28,7 +27,6 @@ class PlayerViewHolder(
                     player.strPlayer,
                     player.strDescriptionEN
                 )
-                Log.d(TAG, "bind:${data[0]} ")
                 onPlayerClicked(data)
             }
             if (URLUtil.isValidUrl(player.strThumb)) {

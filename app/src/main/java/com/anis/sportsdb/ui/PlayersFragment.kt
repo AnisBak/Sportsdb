@@ -1,7 +1,6 @@
 package com.anis.sportsdb.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.MenuHost
@@ -13,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.anis.sportsdb.PlayerAdapter
+import com.anis.sportsdb.util.PlayerAdapter
 import com.anis.sportsdb.R
 import com.anis.sportsdb.databinding.FragmentPlayersBinding
 import com.anis.sportsdb.viewmodel.PlayersViewModel
@@ -24,7 +23,6 @@ import com.google.firebase.ktx.Firebase
 
 import kotlinx.coroutines.launch
 
-private const val TAG="PlayersFragment"
 class PlayersFragment : Fragment(), MenuProvider {
     private lateinit var firebaseAnalytics: FirebaseAnalytics
     private var _binding: FragmentPlayersBinding? = null
@@ -83,7 +81,6 @@ class PlayersFragment : Fragment(), MenuProvider {
             override fun onQueryTextSubmit(query: String): Boolean {
                 searchView.clearFocus()
                 binding.progressBarPlayers.visibility=View.VISIBLE
-                Log.d(TAG, "QueryTextSubmit: $query")
                 firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SEARCH){
                     param(FirebaseAnalytics.Param.SEARCH_TERM, query)
                 }
@@ -91,7 +88,6 @@ class PlayersFragment : Fragment(), MenuProvider {
                 return true
             }
             override fun onQueryTextChange(newText: String): Boolean {
-                Log.d(TAG, "QueryTextChange: $newText")
                 return false
             }
         })
