@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "18387435730",
+    "project_id": "sportsdb-c7b8a",
+    "storage_bucket": "sportsdb-c7b8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18387435730:android:0305c0543815bb85826d0b",
+        "android_client_info": {
+          "package_name": "com.anis.sportsdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18387435730-clbn3iq30f2msbnqvjbfm6bnqiejaumk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLrjY3zq0aFgbDrACQGiX5BfCq7glThRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18387435730-clbn3iq30f2msbnqvjbfm6bnqiejaumk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
